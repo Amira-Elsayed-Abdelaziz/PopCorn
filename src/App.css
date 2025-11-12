@@ -65,3 +65,23 @@ header a {
   border-radius: 0px 5px 5px 0px;
   border-left: 1px solid rgba(209, 213, 219, 1);
 }
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.result span svg {
+  margin: 100% 0 0 0;
+  color: rgba(223, 221, 221, 1);
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+}
+
+.result h2 {
+  color: rgba(223, 221, 221, 1);
+}

@@ -1,15 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-export default function Searchbar() {
+import React from 'react'
+export default function Searchbar({ setSearch }) {
+
+    const inputRef = React.useRef()
+    function formHandler(formData) {
+        console.log(formData.get("search"))
+        setSearch(formData.get("search"))
+    }
     return (
         <>
-            <div class="searchbar">
+            <form action={formHandler} className="searchbar">
                 <span>
-                     <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </span>
-                <input placeholder="Search for a movie" />
+                <input placeholder="Search for a movie" name="search"
+                    ref={inputRef}
+                />
                 <button>Search</button>
-            </div>
+            </form>
         </>
     )
 }
