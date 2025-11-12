@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
+header h1 {
+  color: #FFFFFF;
+  font-weight: 800;
+  margin: 0;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(rgba(14, 14, 14, 0.7)), url("./assets/bg.png");
+  height: 208px;
+  background-position-x: center;
+  background-position-y: -150px;
+
+}
+
+header a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.searchbar {
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -15px;
+  height: 30px;
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  border: 1px solid rgba(209, 213, 219, 1);
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.searchbar button,
+.searchbar input,
+.searchbar span {
+  height: 100%;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchbar input {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.searchbar span {
+  padding: 1%;
+  width: 10%;
+  background-color: transparent;
+
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.searchbar button {
+  flex-grow: 1;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  border-left: 1px solid rgba(209, 213, 219, 1);
 }
