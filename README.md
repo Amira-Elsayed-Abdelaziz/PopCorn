@@ -18,3 +18,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Figma Design 
 
 https://www.figma.com/design/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist?node-id=4-13&t=qc9riVGf0psKNOIa-0
+
+## API 
+TMDB
+https://developer.themoviedb.org/
