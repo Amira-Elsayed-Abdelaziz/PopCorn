@@ -20,5 +20,6 @@ If you are developing a production application, we recommend using TypeScript wi
 https://www.figma.com/design/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist?node-id=4-13&t=qc9riVGf0psKNOIa-0
 
 ## API 
-TMDB
-https://developer.themoviedb.org/
+imdb
+http://www.omdbapi.com/?apikey={key}&i=${id} => single movie
+http://www.omdbapi.com/?apikey={key}&s=${search} => array of movies 
