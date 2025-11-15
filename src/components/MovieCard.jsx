@@ -7,7 +7,7 @@ export default function MovieCard({ id }) {
     React.useEffect(() => {
         fetch(`http://www.omdbapi.com/?apikey=bbc3879d&i=${id}`)
             .then(res => res.json())
-            .then(data => setMovie(data))
+            .then(data => setMovie({...data,Runtime:data.Runtime.split(" ").join("")}))
 
     }, [])
     return (
