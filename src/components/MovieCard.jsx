@@ -7,7 +7,7 @@ export default function MovieCard({ id }) {
     React.useEffect(() => {
         fetch(`http://www.omdbapi.com/?apikey=bbc3879d&i=${id}`)
             .then(res => res.json())
-            .then(data => setMovie({...data,Runtime:data.Runtime.split(" ").join("")}))
+            .then(data => setMovie({ ...data, Runtime: data.Runtime.split(" ").join("") }))
 
     }, [])
     return (
@@ -30,8 +30,9 @@ export default function MovieCard({ id }) {
 
                 </div>
                 <div className="description">{movie.Plot}</div>
-                <Link className="add"><FontAwesomeIcon icon={faPlus} />Watch List</Link>
-
+                <div className="add-btn">
+                    <FontAwesomeIcon icon={faPlus} /><Link >Watch List</Link>
+                </div>
             </div>
         </div>
 
