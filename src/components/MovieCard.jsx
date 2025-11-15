@@ -1,15 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faStar } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router-dom"
+import { WatchListContext } from "../App"
 import React from "react"
 export default function MovieCard({ id }) {
     const [movie, setMovie] = React.useState({})
+    const { watchList, setWatchList } = React.useContext(WatchListContext)
     React.useEffect(() => {
         fetch(`http://www.omdbapi.com/?apikey=bbc3879d&i=${id}`)
             .then(res => res.json())
             .then(data => setMovie({ ...data, Runtime: data.Runtime.split(" ").join("") }))
 
     }, [])
+    function addToWatchList() {
+        setWatchList(prev => [...prev, movie])
+    }
     return (
         <div className="movie-card">
             <div className="card-poster">
@@ -31,7 +35,7 @@ export default function MovieCard({ id }) {
                 </div>
                 <div className="description">{movie.Plot}</div>
                 <div className="add-btn">
-                    <FontAwesomeIcon icon={faPlus} /><Link >Watch List</Link>
+                    <FontAwesomeIcon icon={faPlus} /><button onClick={addToWatchList}>Watch List</button>
                 </div>
             </div>
         </div>

@@ -161,8 +161,9 @@ header a {
 
 }
 
-.movie-card .card-details a {
-
+.movie-card .card-details button {
+border: none;
+background-color: transparent;
   padding: 1% 0;
   font-weight: 800;
   text-decoration: none;
