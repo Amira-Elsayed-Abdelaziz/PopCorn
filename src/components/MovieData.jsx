@@ -7,7 +7,7 @@ export default function MovieData({ id }) {
     const onlyIDs = watchList.map(ele => ele.imdbID)
     const [movie, setMovie] = React.useState({})
     React.useEffect(() => {
-        fetch(`http://www.omdbapi.com/?apikey=bbc3879d&i=${id}`)
+        fetch(`http://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&i=${id}`)
             .then(res => res.json())
             .then(data => setMovie({ ...data, Runtime: data.Runtime.split(" ").join("") }))
     }, [])

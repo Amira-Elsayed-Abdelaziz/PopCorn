@@ -7,9 +7,9 @@ import MovieData from "./MovieData"
 export default function SearchResult({ search }) {
     const [allMoviesId, setAllMoviesId] = React.useState([])
     React.useEffect(() => {
-        fetch(`http://www.omdbapi.com/?apikey=bbc3879d&s=${search}`)
+        fetch(`http://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}&s=${search}`)
             .then(res => res.json())
-            .then(data => setAllMoviesId(data.Search.map(ele => ele.imdbID)))
+            .then(data => setAllMoviesId(data.Search?.map(ele => ele.imdbID)))
     }, [search])
     return (
         <section className="result">
