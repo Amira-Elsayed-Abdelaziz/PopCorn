@@ -23,3 +23,6 @@ https://www.figma.com/design/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist?node-id=4-13
 imdb
 http://www.omdbapi.com/?apikey={key}&i=${id} => single movie
 http://www.omdbapi.com/?apikey={key}&s=${search} => array of movies 
+
+## Deployment
+https://pop-corn-watchlist.netlify.app/
