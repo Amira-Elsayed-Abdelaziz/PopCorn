@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMinus, faPlus, faStar } from "@fortawesome/free-solid-svg-icons"
-import { WatchListContext } from "../App"
+import { WatchListContext } from "../contexts/WatchListProvider"
 import React from "react"
 export default function MovieCard({ movie, addOrRemove }) {
 

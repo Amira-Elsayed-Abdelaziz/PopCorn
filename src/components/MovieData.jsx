@@ -1,6 +1,6 @@
 import React from "react"
 import MovieCard from "./MovieCard"
-import { WatchListContext } from "../App"
+import { WatchListContext } from "../contexts/WatchListProvider"
 export default function MovieData({ id }) {
     const { watchList } = React.useContext(WatchListContext)
     const onlyIDs = watchList.map(ele => ele.imdbID)
